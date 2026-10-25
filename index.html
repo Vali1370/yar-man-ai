@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171322">
+<title>یار من | همراه هوش مصنوعی</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;background:#171322;color:#fff;
+  font-family:Tahoma,Arial,sans-serif;
+}
+header{
+  padding:20px;text-align:center;
+  background:#241c32;border-bottom:1px solid #40344d;
+}
+h1{margin:0 0 8px;color:#ff8caf;font-size:25px}
+main{max-width:520px;margin:auto;padding:18px}
+.screen{
+  min-height:390px;border-radius:24px;
+  background:linear-gradient(160deg,#42304e,#211b2b);
+  display:flex;flex-direction:column;
+  justify-content:center;align-items:center;
+  text-align:center;padding:24px;
+}
+.avatar{
+  width:120px;height:120px;border-radius:50%;
+  background:#60475f;display:grid;place-items:center;
+  font-size:58px;margin-bottom:18px;
+  border:3px solid #ff8caf;
+}
+p{line-height:1.9;color:#e4dbe9}
+button{
+  width:100%;padding:15px;margin-top:12px;
+  border:0;border-radius:14px;font-size:16px;
+  font-weight:bold;cursor:pointer;
+}
+.primary{background:#ff709b;color:#241522}
+.secondary{background:#393044;color:white}
+.note{font-size:12px;color:#bdb0c8;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <h1>♥ یار من</h1>
+  <div>همراه هوش مصنوعی فارسی</div>
+</header>
+<main>
+  <section class="screen">
+    <div class="avatar">♥</div>
+    <h2>وقت گفت‌وگوی ماست</h2>
+    <p id="status">
+      برای شروع مکالمه زنده، آواتار را باز کن.
+    </p>
+    <button class="primary" onclick="openAvatar()">
+      شروع تماس تصویری
+    </button>
+    <button class="secondary" onclick="showHelp()">
+      راهنمای اتصال آواتار
+    </button>
+  </section>
+  <p class="note">
+    آواتار و مکالمه زنده توسط سرویس خارجی ارائه می‌شوند.
+  </p>
+</main>
+<script>
+function openAvatar(){
+  document.getElementById("status").textContent =
+    "صفحه آواتار در حال باز شدن است...";
+  window.open(
+    "https://anam.ai/tools/ai-avatar-playground",
+    "_blank"
+  );
+}
+function showHelp(){
+  document.getElementById("status").textContent =
+    "برای تماس زنده، ابتدا سرویس آواتار را آزمایش کن. " +
+    "اتصال مستقیم و امن در مرحله بعد تنظیم می‌شود.";
+}
+</script>
+</body>
+</html>
